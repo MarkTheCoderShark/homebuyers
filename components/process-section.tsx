@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
   Phone,
   Home,
@@ -9,8 +9,8 @@ import {
   DollarSign,
   Calendar,
   CheckCircle,
-  ArrowRight
-} from 'lucide-react'
+  ArrowRight,
+} from "lucide-react";
 
 export default function ProcessSection() {
   const steps = [
@@ -18,82 +18,87 @@ export default function ProcessSection() {
       number: "01",
       icon: <Phone className="w-8 h-8 text-white" />,
       title: "Contact Us",
-      description: "Call us or fill out our form with your property details. We'll schedule a convenient time to evaluate your home.",
+      description:
+        "Call us or fill out our form with your property details. We'll schedule a convenient time to evaluate your home.",
       details: [
         "Quick 5-minute phone call",
         "No pressure consultation",
-        "Flexible scheduling"
+        "Flexible scheduling",
       ],
-      timeframe: "Same day response"
+      timeframe: "Same day response",
     },
     {
       number: "02",
       icon: <Home className="w-8 h-8 text-white" />,
       title: "Property Evaluation",
-      description: "We'll visit your property for a quick, no-obligation assessment. This usually takes 15-30 minutes.",
+      description:
+        "We'll visit your property for a quick, no-obligation assessment. This usually takes 15-30 minutes.",
       details: [
         "Professional assessment",
         "No repairs needed",
-        "Respectful process"
+        "Respectful process",
       ],
-      timeframe: "Within 24-48 hours"
+      timeframe: "Within 24-48 hours",
     },
     {
       number: "03",
       icon: <FileText className="w-8 h-8 text-white" />,
       title: "Receive Cash Offer",
-      description: "Get your fair, no-obligation cash offer within 24 hours. No waiting, no uncertainty.",
-      details: [
-        "Fair market value",
-        "Written offer",
-        "No hidden fees"
-      ],
-      timeframe: "Within 24 hours"
+      description:
+        "Get your fair, no-obligation cash offer within 24 hours. No waiting, no uncertainty.",
+      details: ["Fair market value", "Written offer", "No hidden fees"],
+      timeframe: "Within 24 hours",
     },
     {
       number: "04",
       icon: <Calendar className="w-8 h-8 text-white" />,
       title: "Choose Closing Date",
-      description: "Accept our offer and pick your closing date. We can close as fast as 7 days or work with your timeline.",
+      description:
+        "Accept our offer and pick your closing date. We can close as fast as 7 days or work with your timeline.",
       details: [
         "Flexible closing dates",
         "As fast as 7 days",
-        "Work around your schedule"
+        "Work around your schedule",
       ],
-      timeframe: "Your choice"
+      timeframe: "Your choice",
     },
     {
       number: "05",
       icon: <DollarSign className="w-8 h-8 text-white" />,
       title: "Get Paid",
-      description: "Close at a local title company and receive your cash. It's that simple - you're done!",
+      description:
+        "Close at a local title company and receive your cash. It's that simple - you're done!",
       details: [
         "Cash at closing",
         "Professional title company",
-        "Secure transaction"
+        "Secure transaction",
       ],
-      timeframe: "Closing day"
-    }
-  ]
+      timeframe: "Closing day",
+    },
+  ];
 
   const faqs = [
     {
       question: "How quickly can you close?",
-      answer: "We can close in as little as 7 days, but we're flexible with your timeline. Whether you need to close quickly or need more time, we'll work with your schedule."
+      answer:
+        "We can close in as little as 7 days, but we're flexible with your timeline. Whether you need to close quickly or need more time, we'll work with your schedule.",
     },
     {
       question: "Do you really buy houses in any condition?",
-      answer: "Yes! We buy houses in any condition - from move-in ready to major fixer-uppers. You don't need to make any repairs, clean, or stage the property."
+      answer:
+        "Yes! We buy houses in any condition - from move-in ready to major fixer-uppers. You don't need to make any repairs, clean, or stage the property.",
     },
     {
       question: "Are there any fees or commissions?",
-      answer: "No! There are no realtor commissions, closing costs, or hidden fees. The offer we make is the amount you'll receive at closing."
+      answer:
+        "No! There are no realtor commissions, closing costs, or hidden fees. The offer we make is the amount you'll receive at closing.",
     },
     {
       question: "How do you determine your offer price?",
-      answer: "We base our offers on current market conditions, comparable sales, and the property's condition. Our goal is to make fair, competitive offers."
-    }
-  ]
+      answer:
+        "We base our offers on current market conditions, comparable sales, and the property's condition. Our goal is to make fair, competitive offers.",
+    },
+  ];
 
   return (
     <section className="section-padding bg-white">
@@ -105,7 +110,8 @@ export default function ProcessSection() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Selling your house has never been easier. Our streamlined process
-            gets you from initial contact to cash in hand in just days, not months.
+            gets you from initial contact to cash in hand in just days, not
+            months.
           </p>
         </div>
 
@@ -138,7 +144,10 @@ export default function ProcessSection() {
 
                   <ul className="space-y-2 mb-4">
                     {step.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-center text-sm text-gray-700">
+                      <li
+                        key={detailIndex}
+                        className="flex items-center text-sm text-gray-700"
+                      >
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {detail}
                       </li>
@@ -162,26 +171,27 @@ export default function ProcessSection() {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to Get Started?
-            </h3>
+            <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied homeowners who chose the fast, easy way to sell.
-              Get your cash offer today - no obligation, no pressure.
+              Join hundreds of satisfied homeowners who chose the fast, easy way
+              to sell. Get your cash offer today - no obligation, no pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="xl"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold"
-                onClick={() => document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("lead-form")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Get My Cash Offer Now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
                 size="xl"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-green-600"
+                className="bg-white text-green-600 hover:bg-gray-100 border-2 border-white font-bold shadow-lg"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call (555) 123-CASH
@@ -197,7 +207,8 @@ export default function ProcessSection() {
               Frequently Asked Questions
             </h3>
             <p className="text-gray-600">
-              Get answers to the most common questions about our cash home buying process
+              Get answers to the most common questions about our cash home
+              buying process
             </p>
           </div>
 
@@ -213,9 +224,7 @@ export default function ProcessSection() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 ml-9">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-600 ml-9">{faq.answer}</p>
                 </CardContent>
               </Card>
             ))}
@@ -251,5 +260,5 @@ export default function ProcessSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

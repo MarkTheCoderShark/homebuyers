@@ -1,36 +1,39 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Phone, Mail, MapPin, Clock, DollarSign, Home } from 'lucide-react'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Phone, Mail, MapPin, Clock, DollarSign, Home } from "lucide-react";
 
 export default function HeroSection() {
   const [formData, setFormData] = useState({
-    address: '',
-    phone: '',
-    email: '',
-    name: ''
-  })
+    address: "",
+    phone: "",
+    email: "",
+    name: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission - integrate with your lead capture system
-    console.log('Lead submitted:', formData)
+    console.log("Lead submitted:", formData);
     // You would typically send this to your backend/CRM
-  }
+  };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   return (
     <section className="hero-gradient text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <div className="container-max section-padding relative z-10">
@@ -45,13 +48,13 @@ export default function HeroSection() {
             </div>
 
             <h1 className="hero-title text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              Sell Your House Fast for{' '}
+              Sell Your House Fast for{" "}
               <span className="text-yellow-300">Cash</span>
             </h1>
 
             <p className="text-xl lg:text-2xl mb-8 text-green-100 leading-relaxed">
-              We buy homes in ANY condition. No repairs, no showings, no hassles.
-              Get a fair cash offer and close in as little as 7 days.
+              We buy homes in ANY condition. No repairs, no showings, no
+              hassles. Get a fair cash offer and close in as little as 7 days.
             </p>
 
             {/* Key Benefits */}
@@ -95,14 +98,17 @@ export default function HeroSection() {
               <Button
                 size="xl"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold shadow-xl"
-                onClick={() => document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("lead-form")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Get My Cash Offer Now
               </Button>
               <Button
                 size="xl"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-green-600"
+                className="bg-white text-green-600 hover:bg-gray-100 border-2 border-white font-bold shadow-lg"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call (555) 123-CASH
@@ -129,7 +135,9 @@ export default function HeroSection() {
                     type="text"
                     placeholder="123 Main St, City, State"
                     value={formData.address}
-                    onChange={(e) => handleInputChange('address', e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("address", e.target.value)
+                    }
                     className="form-input"
                     required
                   />
@@ -141,7 +149,7 @@ export default function HeroSection() {
                     type="text"
                     placeholder="John Smith"
                     value={formData.name}
-                    onChange={(e) => handleInputChange('name', e.target.value)}
+                    onChange={(e) => handleInputChange("name", e.target.value)}
                     className="form-input"
                     required
                   />
@@ -153,7 +161,7 @@ export default function HeroSection() {
                     type="tel"
                     placeholder="(555) 123-4567"
                     value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
                     className="form-input"
                     required
                   />
@@ -165,7 +173,7 @@ export default function HeroSection() {
                     type="email"
                     placeholder="john@example.com"
                     value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
                     className="form-input"
                   />
                 </div>
@@ -206,5 +214,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
