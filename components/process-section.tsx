@@ -21,8 +21,8 @@ export default function ProcessSection() {
       description:
         "Call us or fill out our form with your property details. We'll schedule a convenient time to evaluate your home.",
       details: [
-        "Quick 5-minute phone call",
-        "No pressure consultation",
+        "Quick 5-minute call",
+        "No pressure process",
         "Flexible scheduling",
       ],
       timeframe: "Same day response",
@@ -58,7 +58,7 @@ export default function ProcessSection() {
       details: [
         "Flexible closing dates",
         "As fast as 7 days",
-        "Work around your schedule",
+        "Work with your timeline",
       ],
       timeframe: "Your choice",
     },
@@ -141,14 +141,14 @@ export default function ProcessSection() {
                     {step.description}
                   </p>
 
-                  <ul className="space-y-1 mb-3">
+                  <ul className="space-y-2 mb-4">
                     {step.details.map((detail, detailIndex) => (
                       <li
                         key={detailIndex}
-                        className="flex items-center text-xs text-gray-700"
+                        className="flex items-start text-sm text-gray-700"
                       >
-                        <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                        {detail}
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="leading-relaxed">{detail}</span>
                       </li>
                     ))}
                   </ul>
