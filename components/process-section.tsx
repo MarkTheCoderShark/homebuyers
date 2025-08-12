@@ -123,22 +123,24 @@ export default function ProcessSection() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="text-center">
-                {/* Step Number & Icon */}
-                <div className="relative mb-4">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                {/* Icon */}
+                <div className="mb-4">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
                     {step.icon}
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-bold text-gray-900">
-                    {step.number}
                   </div>
                 </div>
 
                 {/* Step Content */}
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="bg-gray-50 rounded-lg p-4 h-80 flex flex-col relative">
+                  {/* Step Number in top-left */}
+                  <div className="absolute -top-2 -left-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-sm font-bold text-gray-900 shadow-lg">
+                    {step.number}
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 mt-2">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 mb-3 text-sm leading-relaxed">
+                  <p className="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
                     {step.description}
                   </p>
 
@@ -154,7 +156,7 @@ export default function ProcessSection() {
                     ))}
                   </ul>
 
-                  <div className="bg-green-100 rounded-lg p-2">
+                  <div className="bg-green-100 rounded-lg p-2 mt-auto">
                     <div className="text-xs font-semibold text-green-800 uppercase tracking-wide">
                       Timeline
                     </div>
