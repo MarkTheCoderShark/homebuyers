@@ -21,9 +21,9 @@ export default function ProcessSection() {
       description:
         "Call us or fill out our form with your property details. We'll schedule a convenient time to evaluate your home.",
       details: [
-        "Quick 5-minute call",
-        "No pressure process",
-        "Flexible scheduling",
+        "Quick 5-minute phone call",
+        "No pressure consultation",
+        "Flexible scheduling available",
       ],
       timeframe: "Same day response",
     },
@@ -34,9 +34,9 @@ export default function ProcessSection() {
       description:
         "We'll visit your property for a quick, no-obligation assessment. This usually takes 15-30 minutes.",
       details: [
-        "Professional assessment",
-        "No repairs needed",
-        "Respectful process",
+        "Professional assessment done",
+        "No repairs needed at all",
+        "Respectful process guaranteed",
       ],
       timeframe: "Within 24-48 hours",
     },
@@ -46,7 +46,11 @@ export default function ProcessSection() {
       title: "Receive Cash Offer",
       description:
         "Get your fair, no-obligation cash offer within 24 hours. No waiting, no uncertainty.",
-      details: ["Fair market value", "Written offer", "No hidden fees"],
+      details: [
+        "Fair market value offer",
+        "Written offer provided",
+        "No hidden fees ever",
+      ],
       timeframe: "Within 24 hours",
     },
     {
@@ -56,9 +60,9 @@ export default function ProcessSection() {
       description:
         "Accept our offer and pick your closing date. We can close as fast as 7 days or work with your timeline.",
       details: [
-        "Flexible closing dates",
-        "As fast as 7 days",
-        "Work with your timeline",
+        "Flexible closing dates available",
+        "As fast as 7 days possible",
+        "Work with your timeline needs",
       ],
       timeframe: "Your choice",
     },
@@ -69,9 +73,9 @@ export default function ProcessSection() {
       description:
         "Close at a local title company and receive your cash. It's that simple - you're done!",
       details: [
-        "Cash at closing",
-        "Professional title company",
-        "Secure transaction",
+        "Cash at closing guaranteed",
+        "Professional title company used",
+        "Secure transaction protected",
       ],
       timeframe: "Closing day",
     },
