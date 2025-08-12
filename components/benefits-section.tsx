@@ -118,7 +118,7 @@ export default function BenefitsSection() {
           {benefits.map((benefit, index) => (
             <Card
               key={index}
-              className="feature-card hover:shadow-lg transition-all duration-300"
+              className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
             >
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 p-3 bg-green-100 rounded-full w-fit">

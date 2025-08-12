@@ -353,7 +353,7 @@ export default function ProcessSection() {
             {faqs.map((faq, index) => (
               <Card
                 key={index}
-                className="feature-card cursor-pointer transition-all duration-300 hover:shadow-lg"
+                className="bg-white rounded-xl shadow-md border border-gray-200 p-6 cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-gray-300"
                 onClick={() => setShowFAQ(showFAQ === index ? null : index)}
               >
                 <CardHeader>

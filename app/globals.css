@@ -108,6 +108,7 @@
 .feature-card {
     @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6 transition-all duration-300 hover:shadow-lg hover:border-gray-300;
     transform: translateY(0);
+    color: #374151; /* Ensure dark text color */
 }
 
 .feature-card:hover {

@@ -134,7 +134,7 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="feature-card hover:shadow-lg transition-all duration-300 relative"
+              className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 hover:border-gray-300 relative"
             >
               {/* Quote Icon */}
               <div className="absolute top-4 right-4">
