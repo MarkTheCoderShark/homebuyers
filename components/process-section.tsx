@@ -116,49 +116,49 @@ export default function ProcessSection() {
         </div>
 
         {/* Process Steps */}
-        <div className="relative">
+        <div className="relative mb-16">
           {/* Connection Line */}
           <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-green-200 via-green-400 to-green-600 z-0"></div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="text-center">
                 {/* Step Number & Icon */}
-                <div className="relative mb-6">
-                  <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="relative mb-4">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
                     {step.icon}
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-sm font-bold text-gray-900">
+                  <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-bold text-gray-900">
                     {step.number}
                   </div>
                 </div>
 
                 {/* Step Content */}
-                <div className="bg-gray-50 rounded-lg p-6 h-full">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 text-sm">
+                  <p className="text-gray-600 mb-3 text-sm leading-relaxed">
                     {step.description}
                   </p>
 
-                  <ul className="space-y-2 mb-4">
+                  <ul className="space-y-1 mb-3">
                     {step.details.map((detail, detailIndex) => (
                       <li
                         key={detailIndex}
-                        className="flex items-center text-sm text-gray-700"
+                        className="flex items-center text-xs text-gray-700"
                       >
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                         {detail}
                       </li>
                     ))}
                   </ul>
 
-                  <div className="bg-green-100 rounded-lg p-3">
+                  <div className="bg-green-100 rounded-lg p-2">
                     <div className="text-xs font-semibold text-green-800 uppercase tracking-wide">
                       Timeline
                     </div>
-                    <div className="text-sm font-medium text-green-700">
+                    <div className="text-xs font-medium text-green-700">
                       {step.timeframe}
                     </div>
                   </div>
@@ -169,7 +169,7 @@ export default function ProcessSection() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
+        <div className="text-center">
           <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
