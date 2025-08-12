@@ -117,27 +117,24 @@ export default function ProcessSection() {
 
         {/* Process Steps */}
         <div className="relative mb-16">
-          {/* Connection Line */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-green-200 via-green-400 to-green-600 z-0"></div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="text-center">
-                {/* Icon */}
-                <div className="mb-4">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto shadow-lg">
-                    {step.icon}
+                {/* Step Content with Icon */}
+                <div className="bg-gray-50 rounded-lg p-4 pt-8 h-96 flex flex-col relative">
+                  {/* Icon */}
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                    <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
+                      {step.icon}
+                    </div>
                   </div>
-                </div>
 
-                {/* Step Content */}
-                <div className="bg-gray-50 rounded-lg p-4 h-80 flex flex-col relative">
                   {/* Step Number in top-left */}
                   <div className="absolute -top-2 -left-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-sm font-bold text-gray-900 shadow-lg">
                     {step.number}
                   </div>
 
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 mt-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 mt-4">
                     {step.title}
                   </h3>
                   <p className="text-gray-600 mb-3 text-sm leading-relaxed flex-grow">
